@@ -3,6 +3,7 @@ import { defineComponent } from 'vue';
 import FeatureHighlight from '@/components/FeatureHighlight.vue';
 import ProblemSection from '@/components/ProblemSection.vue';
 import SolutionSection from '@/components/SolutionSection.vue';
+import WhyCraftalSection from '@/sections/WhyCraftalSection.vue';
 import IllustrationSection from '@/components/IllustrationSection.vue';
 import QuoteSection from '@/components/QuoteSection.vue';
 import ContactForm from '@/components/ContactForm.vue';
@@ -13,6 +14,7 @@ export default defineComponent({
     FeatureHighlight,
     ProblemSection,
     SolutionSection,
+    WhyCraftalSection,
     IllustrationSection,
     QuoteSection,
     ContactForm
@@ -77,6 +79,9 @@ export default defineComponent({
 
     <!-- The Solution Section -->
     <solution-section />
+
+    <!-- Why Craftal Section -->
+    <why-craftal-section />
 
     <!-- Benefits Section -->
     <section class="section section--light benefits-section">

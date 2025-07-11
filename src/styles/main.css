@@ -4,17 +4,7 @@
   --section-padding: 6rem;
   --content-max-width: 1200px;
   --content-padding: 1.5rem;
-  /* Colors */
-  --color-primary: #1976D2;
-  --color-secondary: #424242;
-  --color-accent: #82B1FF;
-  --color-error: #FF5252;
-  --color-info: #2196F3;
-  --color-success: #4CAF50;
-  --color-warning: #FFC107;
-  --color-background-light: #f8f9fa;
-  --color-text-secondary: #6c757d;
-  --color-border: #dee2e6;
+
 
   /* Borders & Shadows */
   --border-radius-md: 4px;
@@ -63,25 +53,25 @@ html {
 body {
   font-family: var(--font-primary);
   line-height: 1.5;
-  color: var(--color-secondary);
-  background-color: #ffffff;
+  color: rgb(var(--v-theme-on-surface));
+  background-color: rgb(var(--v-theme-background));
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
   font-weight: 600;
   line-height: 1.2;
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
 }
 
 a {
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: rgb(var(--v-theme-accent));
 }
 
 img {
@@ -97,7 +87,7 @@ img {
 }
 
 .section--light {
-  background-color: var(--color-background-light);
+  background-color: rgb(var(--v-theme-surface));
 }
 
 .hero-section {
@@ -152,24 +142,24 @@ img {
 }
 
 .button--primary {
-  background-color: var(--color-primary);
+  background-color: rgb(var(--v-theme-primary));
   color: white;
-  border-color: var(--color-primary);
+  border-color: rgb(var(--v-theme-primary));
 }
 
 .button--primary:hover {
-  background-color: #1565C0;
-  border-color: #1565C0;
+  background-color: rgb(var(--v-theme-primary));
+  filter: brightness(90%);
 }
 
 .button--outline {
   background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
+  border-color: rgb(var(--v-theme-primary));
 }
 
 .button--outline:hover {
-  background-color: rgba(25, 118, 210, 0.08);
+  background-color: rgba(var(--v-theme-primary), 0.08);
 }
 
 /* Forms */
@@ -181,7 +171,7 @@ img {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
 }
 
 .form-control {
@@ -190,18 +180,18 @@ img {
   padding: 0.75rem 1rem;
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--color-secondary);
-  background-color: #ffffff;
+  color: rgb(var(--v-theme-on-surface));
+  background-color: rgb(var(--v-theme-surface));
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   border-radius: 4px;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .form-control:focus {
-  border-color: var(--color-accent);
+  border-color: rgb(var(--v-theme-accent));
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(130, 177, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(var(--v-theme-accent), 0.25);
 }
 
 /* Responsive utilities */
@@ -271,14 +261,14 @@ Component Styles (from HomeView.vue)
 .section-header__title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
   margin-bottom: var(--space-md);
   line-height: 1.2;
 }
 
 .section-header__subtitle {
   font-size: 1.2rem;
-  color: var(--color-text-secondary);
+  color: rgb(var(--v-theme-secondary));
   line-height: 1.6;
   margin: 0;
 }
@@ -302,12 +292,12 @@ Component Styles (from HomeView.vue)
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: var(--space-lg);
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
 }
 
 .hero-section__subtitle {
   font-size: 1.25rem;
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
   margin-bottom: var(--space-xl);
   line-height: 1.6;
 }
@@ -343,8 +333,8 @@ Component Styles (from HomeView.vue)
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--color-secondary);
-  background-color: var(--color-background-light);
+  color: rgb(var(--v-theme-on-surface));
+  background-color: rgb(var(--v-theme-surface));
   border-radius: 8px; /* Replaced var */
 }
 
@@ -361,7 +351,7 @@ Component Styles (from HomeView.vue)
 
 .social-proof-section__text {
   font-size: 1rem;
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
   margin-bottom: var(--space-lg);
 }
 
@@ -374,7 +364,7 @@ Component Styles (from HomeView.vue)
 }
 
 .social-proof-section__logo-placeholder {
-  background-color: #f1f3f5;
+  background-color: rgb(var(--v-theme-surface));
   border-radius: 4px;
   height: 40px;
   width: 120px;
@@ -477,7 +467,7 @@ Component Styles (from HomeView.vue)
   left: 50%;
   transform: translateX(-50%);
   font-size: 6rem;
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
   opacity: 0.1;
   font-family: 'Georgia', serif;
   line-height: 1;
@@ -487,7 +477,7 @@ Component Styles (from HomeView.vue)
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.6;
-  color: var(--color-primary-dark);
+  color: rgb(var(--v-theme-on-surface));
   margin-bottom: var(--space-xl);
   font-style: italic;
 }
@@ -499,7 +489,7 @@ Component Styles (from HomeView.vue)
 .quote__author {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--color-text-secondary);
+  color: rgb(var(--v-theme-primary));
   font-style: normal;
 }
 
@@ -511,13 +501,12 @@ Component Styles (from HomeView.vue)
 
 /* Card Component */
 .card {
-  background-color: #ffffff;
-  border: 1px solid var(--color-border);
+  background-color: rgb(var(--v-theme-surface));
+  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   border-radius: var(--border-radius-lg);
   padding: var(--space-xl);
-  text-align: center;
-  box-shadow: var(--shadow-md);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   height: 100%;
 }
 
@@ -534,11 +523,24 @@ Component Styles (from HomeView.vue)
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: var(--space-md);
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-on-surface));
 }
 
 .card__text {
-  color: var(--color-text-secondary);
+  color: rgb(var(--v-theme-secondary));
   line-height: 1.6;
   margin: 0;
+}
+
+/* Why Craftal Section */
+.why-craftal-section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.why-craftal-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
 }

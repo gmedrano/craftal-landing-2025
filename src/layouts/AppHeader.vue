@@ -1,10 +1,13 @@
 <script lang="ts">
-import { defineComponent, ref } from 'vue';
+import { defineComponent, ref, computed } from 'vue';
+import { useTheme } from 'vuetify';
 
 export default defineComponent({
   name: 'AppHeader',
   setup() {
+    const theme = useTheme();
     const mobileMenuOpen = ref(false);
+
     const navItems = [
       { title: 'Features', to: '#features' },
       { title: 'How It Works', to: '#how-it-works' },
@@ -17,21 +20,36 @@ export default defineComponent({
       mobileMenuOpen.value = !mobileMenuOpen.value;
     };
 
+    const toggleTheme = () => {
+      theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark';
+    };
+
+    const themeIcon = computed(() => {
+      return theme.global.current.value.dark ? 'mdi-weather-sunny' : 'mdi-weather-night';
+    });
+
+    const logoSrc = computed(() => {
+      return theme.global.current.value.dark ? '/craftal-logo.svg' : '/craftal-logo-dark.svg';
+    });
+
     return {
       navItems,
       mobileMenuOpen,
       toggleMobileMenu,
+      toggleTheme,
+      themeIcon,
+      logoSrc,
     };
   },
 });
 </script>
 
 <template>
-  <v-app-bar app color="white" elevation="1" height="80">
+  <v-app-bar app elevation="1" height="80">
     <div class="container header">
       <!-- Logo -->
       <router-link to="/" class="header__logo">
-        <img src="/craftal-logo.svg" alt="Craftal Logo" class="header__logo-img" />
+        <img :src="logoSrc" alt="Craftal Logo" class="header__logo-img" />
       </router-link>
 
       <!-- Desktop Navigation -->
@@ -51,14 +69,21 @@ export default defineComponent({
         @click="mobileMenuOpen = !mobileMenuOpen"
       ></v-app-bar-nav-icon>
 
-      <!-- CTA Button -->
-      <v-btn
-        color="primary"
-        class="header__cta"
-        size="large"
-      >
-        Join the Early List
-      </v-btn>
+      <div class="header__actions">
+        <!-- Theme Toggle Button -->
+        <v-btn icon @click="toggleTheme">
+          <v-icon>{{ themeIcon }}</v-icon>
+        </v-btn>
+
+        <!-- CTA Button -->
+        <v-btn
+          color="primary"
+          class="header__cta"
+          size="large"
+        >
+          Join the Early List
+        </v-btn>
+      </div>
     </div>
   </v-app-bar>
 
@@ -107,7 +132,7 @@ export default defineComponent({
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
 }
 
 .header__logo-text {
@@ -130,7 +155,7 @@ export default defineComponent({
 }
 
 .header__nav-link {
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
@@ -139,11 +164,17 @@ export default defineComponent({
 }
 
 .header__nav-link:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(var(--v-theme-on-surface), 0.08);
 }
 
 .header__mobile-menu {
   display: block;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .header__cta {
@@ -152,18 +183,18 @@ export default defineComponent({
 
 .mobile-menu__header {
   padding: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
 }
 
 @media (min-width: 960px) {
   .header__nav {
     display: block;
   }
-  
+
   .header__mobile-menu {
     display: none;
   }
-  
+
   .header__cta {
     display: inline-flex;
   }

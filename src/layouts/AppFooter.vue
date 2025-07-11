@@ -1,9 +1,16 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, computed } from 'vue';
+import { useTheme } from 'vuetify';
 
 export default defineComponent({
   name: 'AppFooter',
   setup() {
+    const theme = useTheme();
+
+    const logoSrc = computed(() => {
+      return theme.global.current.value.dark ? '/craftal-logo.svg' : '/craftal-logo-dark.svg';
+    });
+
     const currentYear = new Date().getFullYear();
     
     const footerLinks = {
@@ -32,6 +39,7 @@ export default defineComponent({
     };
 
     return {
+      logoSrc,
       currentYear,
       footerLinks,
     };
@@ -46,7 +54,7 @@ export default defineComponent({
         <div class="footer__main">
           <!-- Logo and Tagline -->
           <div class="footer__brand">
-            <img src="/craftal-logo.svg" alt="Craftal Logo" class="footer__logo-img" />
+            <img :src="logoSrc" alt="Craftal Logo" class="footer__logo-img" />
             <p class="footer__tagline">
               From Idea to Ecosystem — Finally.
             </p>
