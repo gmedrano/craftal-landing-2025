@@ -31,7 +31,7 @@ export default defineComponent({
     <div class="container header">
       <!-- Logo -->
       <router-link to="/" class="header__logo">
-        <span class="header__logo-text">Craftal</span>
+        <img src="/craftal-logo.svg" alt="Craftal Logo" class="header__logo-img" />
       </router-link>
 
       <!-- Desktop Navigation -->

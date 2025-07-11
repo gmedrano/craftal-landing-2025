@@ -46,7 +46,7 @@ export default defineComponent({
         <div class="footer__main">
           <!-- Logo and Tagline -->
           <div class="footer__brand">
-            <h3 class="footer__logo">Craftal</h3>
+            <img src="/craftal-logo.svg" alt="Craftal Logo" class="footer__logo-img" />
             <p class="footer__tagline">
               From Idea to Ecosystem — Finally.
             </p>

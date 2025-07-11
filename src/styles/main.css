@@ -238,6 +238,27 @@ Component Styles (from HomeView.vue)
   padding-top: 80px; /* Account for fixed header */
 }
 
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header__logo-img {
+  height: 32px; /* Adjust as needed */
+  width: auto;
+  display: block;
+}
+
+/* Footer */
+.footer__logo-img {
+  height: 36px; /* Adjust as needed */
+  width: auto;
+  margin-bottom: var(--space-md);
+}
+
 /* Section Header */
 .section-header {
   text-align: center;
