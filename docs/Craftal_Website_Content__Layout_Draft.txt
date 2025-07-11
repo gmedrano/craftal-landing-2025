@@ -1,0 +1,106 @@
+Craftal Website Content &
+Layout Draft
+Hero Section
+# From Idea to Ecosystem — Finally.
+**Craftal** is the AI-native product design platform for modeling and building
+**entire product ecosystems**, not just apps.
+[ Request Early Access ] [ Watch Demo ]
+Suggested Visual: An abstract wireframe of the Craftal Workflow Canvas with
+animated nodes showing connected states (representing BD + PM + PD + EN
+working in sync).
+Key Value Propositions (3-column layout)
+## Why Craftal?
+| 🌐 | Build Ecosystems, Not Screens |
+|----|-------------------------------|
+| 🔀 | Align Business, Product & Code |
+| 🤖 | Designed for GenAI-Native Workflows |
+Each pillar should have:
+- 1-sentence summary
+- Icon or visual block
+Suggested Visuals:
+A DSL “document” with arrows to Jira, Figma, and VS Code icons
+(bidirectional sync).
+Craftal Website Content & Layout Draft 1
+A looping flow that touches PM → PD → EN → QA → back to BD.
+Section: The Problem
+## Teams Work in Silos. Craftal Unifies Them.
+Modern product teams depend on shared understanding — but business logic
+is scattered across roadmaps, design tools, dev tickets, and docs.
+Craftal acts as a **shared semantic canvas** where PMs, designers, and engi
+neers model, align, and ship together.
+Suggested Illustration: Diagram from deck showing siloed outputs (e.g. static UI
+in PD, acceptance criteria in PM, regression test in QA) and disconnected arrows.
+Section: The Craftal Solution
+## Introducing the Business Domain Modeling Canvas
+Craftal centralizes how teams define and evolve the business domain — the s
+hared source of truth behind every requirement, interaction, and feature.
+Using AI-generated, editable DSL blueprints, teams:
+- Translate business rules into structured flows
+- Generate and sync outputs with their tools (Jira, Figma, etc.)
+- Align around shared logic in real-time
+Suggested Visual: Screenshot or stylized mock of the AI-generated business rule
+→ transformed into: Jira story, Figma screen, roadmap item (from the “$450
+discount” slide).
+Section: Core Components (2-column grid layout)
+Craftal Website Content & Layout Draft 2
+## What Makes Craftal Unique?
+### 🧠 A Domain-Specific Language (DSL) for Product Thinking
+Craftal’s DSL describes features, user flows, logic, and product intent in a stru
+ctured way — interpretable by humans and AI.
+### 🧩 A Visual Workflow Canvas
+An interactive system blueprint made of abstracted screens, states, and user
+actions — designed for collaboration across roles.
+### 🔁 Bidirectional Tool Syncing
+From Jira to Figma to VS Code, Craftal syncs intent and output across your st
+ack using its DSL as the bridge.
+### 🤖 GenAI at the Core
+Craftal’s agents help generate structure, validate gaps, and visualize impact in
+seconds — reducing friction and back-and-forth.
+Suggested Visual: Split grid with icon and brief text for each. Canvas illustration
+in center, DSL doc as the data spine.
+Section: Use Case Example (1-column layout)
+## From Business Rule to Product Ecosystem
+"Customers spending more than $450 on the same transaction should be rew
+arded with a 20% discount to stimulate sales."
+➡ Turns into:
+- A user story in your Jira backlog
+- A growth initiative in Aha
+- A pricing logic test in your QA suite
+- A UX change in your Figma wireframes
+Craftal Website Content & Layout Draft 3
+Craftal makes this flow natural — structured, traceable, and integrated.
+Suggested Visual: Repurpose business rule → tools integration flow image.
+FAQ (accordion format)
+## Frequently Asked Questions
+**What makes Craftal different from tools like Figma or Builder?**
+Craftal isn’t just for wireframes or mockups. It models the logic, flows, and int
+erconnected intent behind the UI — using a semantic DSL that bridges design,
+dev, and product.
+**Is this a design tool or a dev tool?**
+It’s both — and neither. It’s a shared intelligence layer that integrates with the t
+ools you already use.
+**How does Craftal use AI?**
+GenAI helps generate, evaluate, and suggest changes across your product’s fl
+ow — making it easier to structure ideas, test variations, and spot gaps.
+**When can I use it?**
+Request early access above — the DSL Generator is already working, and the
+Workflow Canvas is in active development.
+Final CTA
+## Ready to Build Smarter?
+Start designing with context. Align with intent. Ship with confidence.
+[ Request Early Access ] [ Watch the 1-min Video ]
+Craftal Website Content & Layout Draft 4
+Footer
+Logo + short tagline: “Craftal — From idea to ecosystem.”
+Contact: hello@craftal.so (via Formspree.io integration)
+Social links placeholder
+<form action="https://formspree.io/f/your-id-here" method="POST">
+<input type="email" name="email" placeholder="Your email" required>
+<textarea name="message" placeholder="Tell us something..."></textarea>
+<button type="submit">Send</button>
+</form>
+Let me know if you want:
+A Figma wireframe based on this layout
+Component specs for dev handoff
+Copy refinements for specific sections (like shorter hero text or a more
+technical DSL breakdown)
