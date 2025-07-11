@@ -12,7 +12,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <section class="problem-section">
+  <section class="section section--light problem-section">
     <div class="problem-section__container">
       <!-- Main Section Header -->
       <div class="problem-section__header">
