@@ -3,13 +3,15 @@ import { defineComponent } from 'vue';
 import FeatureHighlight from '@/components/FeatureHighlight.vue';
 import ProblemSection from '@/components/ProblemSection.vue';
 import SolutionSection from '@/components/SolutionSection.vue';
+import IllustrationSection from '@/components/IllustrationSection.vue';
 
 export default defineComponent({
   name: 'HomeView',
   components: {
     FeatureHighlight,
     ProblemSection,
-    SolutionSection
+    SolutionSection,
+    IllustrationSection
   },
   setup() {
     const features = [
@@ -90,6 +92,57 @@ export default defineComponent({
 
     <!-- The Solution Section -->
     <solution-section />
+
+    <!-- How It Works - Visual Demonstration -->
+    <illustration-section 
+      title="From Complex Requirements to Clear Implementation"
+      subtitle="Craftal's visual canvas makes it easy to model and understand complex business logic"
+      icon="mdi-shape-outline"
+      placeholder-text="Visualization of Craftal's modeling interface"
+    >
+      <p>Craftal transforms the way teams collaborate on product development by providing a visual, interactive canvas that bridges the gap between business requirements and technical implementation.</p>
+      
+      <ul>
+        <li>Model complex business rules and workflows visually</li>
+        <li>Generate implementation-ready code and documentation</li>
+        <li>Keep all stakeholders aligned with a single source of truth</li>
+      </ul>
+    </illustration-section>
+
+    <!-- Seamless Integration Section -->
+    <illustration-section 
+      reversed
+      type="light"
+      title="Seamless Integration with Your Existing Tools"
+      subtitle="Connect Craftal with your favorite development and design tools"
+      icon="mdi-connection"
+      placeholder-text="Integration diagram with popular tools"
+    >
+      <p>Craftal fits perfectly into your existing workflow, connecting with the tools you already use every day.</p>
+      
+      <ul>
+        <li>Sync with design tools like Figma and Sketch</li>
+        <li>Connect to project management tools like Jira and Linear</li>
+        <li>Export to code repositories with version control integration</li>
+      </ul>
+    </illustration-section>
+
+    <!-- AI-Powered Assistance -->
+    <illustration-section 
+      type="primary"
+      title="AI-Powered Development Assistant"
+      subtitle="Leverage AI to accelerate your development workflow"
+      icon="mdi-robot"
+      placeholder-text="AI assistance in action"
+    >
+      <p>Our AI assistant helps you build faster and with fewer errors by suggesting improvements, generating boilerplate code, and catching potential issues before they become problems.</p>
+      
+      <ul>
+        <li>Automated code generation from visual models</li>
+        <li>Intelligent suggestions for optimization</li>
+        <li>Real-time collaboration features for distributed teams</li>
+      </ul>
+    </illustration-section>
 
     <!-- Social Proof Section -->
     <section class="home__section home__section--light">
