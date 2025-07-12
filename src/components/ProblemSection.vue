@@ -27,8 +27,7 @@ export default defineComponent({
         <!-- Problem 1: Fragmentation -->
         <div class="problem-card">
           <div class="problem-card__visual">
-            <!-- TODO: Replace with 'Business Domain Fragmentation' illustration -->
-            <div class="problem-card__placeholder">Illustration Placeholder</div>
+            <img src="/images/business-domain-fragmentation.png" alt="Business Domain Fragmentation Illustration" class="problem-card__image" />
           </div>
           <div class="problem-card__content">
             <h3 class="problem-card__title">Business Domain Fragmentation</h3>
@@ -41,8 +40,7 @@ export default defineComponent({
         <!-- Problem 2: Lost in Translation -->
         <div class="problem-card">
           <div class="problem-card__visual">
-            <!-- TODO: Replace with 'Lost in Translation' illustration -->
-            <div class="problem-card__placeholder">Illustration Placeholder</div>
+            <img src="/images/lost-in-translation.png" alt="Lost in Translation Illustration" class="problem-card__image" />
           </div>
           <div class="problem-card__content">
             <h3 class="problem-card__title">The "Lost in Translation" Effect</h3>
@@ -114,6 +112,15 @@ export default defineComponent({
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   position: relative;
   background-color: #e9ecef;
+}
+
+.problem-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .problem-card__placeholder {

@@ -22,8 +22,7 @@ export default defineComponent({
         <!-- Solution 1: Unified Domain -->
         <div class="solution-card">
           <div class="solution-card__visual">
-            <!-- TODO: Replace with 'Unified Business Domain' illustration -->
-            <div class="solution-card__placeholder">Illustration Placeholder</div>
+            <img src="/images/unified-business-domain.png" alt="Unified Business Domain Illustration" class="solution-card__image" />
           </div>
           <div class="solution-card__content">
             <h3 class="solution-card__title">A Unified Business Domain</h3>
@@ -36,8 +35,7 @@ export default defineComponent({
         <!-- Solution 2: Implementation-Ready Outputs -->
         <div class="solution-card">
           <div class="solution-card__visual">
-            <!-- TODO: Replace with 'Implementation-Ready Outputs' illustration -->
-            <div class="solution-card__placeholder">Illustration Placeholder</div>
+            <img src="/images/implementation-ready-outputs.png" alt="Implementation-Ready Outputs Illustration" class="solution-card__image" />
           </div>
           <div class="solution-card__content">
             <h3 class="solution-card__title">Implementation-Ready Outputs</h3>
@@ -109,6 +107,15 @@ export default defineComponent({
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   position: relative;
   background-color: #e9ecef;
+}
+
+.solution-card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .solution-card__placeholder {
