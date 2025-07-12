@@ -18,7 +18,7 @@ const vuetify = createVuetify({
       light: {
         dark: false,
         colors: {
-          primary: '#1976D2',
+          primary: '#673AB7', // A deep purple that aligns with the brand
           secondary: '#424242',
           accent: '#82B1FF',
           error: '#FF5252',
@@ -41,6 +41,7 @@ const vuetify = createVuetify({
           success: '#4CAF50',
           warning: '#FFC107',
           background: '#1a0c29',
+          'background-alt': '#2a1442',
           surface: '#2a1442',
           'on-surface': '#d8c8ea',
         },

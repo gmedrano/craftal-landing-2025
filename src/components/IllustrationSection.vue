@@ -68,7 +68,7 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-background);
+  background-color: rgba(var(--v-border-color), 0.1);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
@@ -77,33 +77,35 @@ export default defineComponent({
 .illustration-section__placeholder {
   text-align: center;
   padding: 2rem;
-  color: var(--color-text-secondary);
+  color: rgb(var(--v-theme-on-surface));
+  opacity: 0.7;
 }
 
 .illustration-section__icon {
   font-size: 4rem;
   margin-bottom: 1rem;
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
 }
 
 .illustration-section__title {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 .illustration-section__subtitle {
   font-size: 1.25rem;
-  color: var(--color-text-secondary);
+  color: rgb(var(--v-theme-on-surface));
+  opacity: 0.7;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
 .illustration-section__body {
   line-height: 1.7;
-  color: var(--color-text);
+  color: rgb(var(--v-theme-on-surface));
 }
 
 .illustration-section__body :deep(p) {
@@ -122,7 +124,7 @@ export default defineComponent({
 
 .illustration-section__body :deep(li:before) {
   content: '•';
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
   font-weight: bold;
   display: inline-block;
   width: 1em;

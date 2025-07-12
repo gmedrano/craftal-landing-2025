@@ -15,10 +15,10 @@ export default defineComponent({
   <section class="section section--light problem-section">
     <div class="problem-section__container">
       <!-- Main Section Header -->
-      <div class="problem-section__header">
-        <h2 class="problem-section__title">The High Cost of Disconnected Teams</h2>
-        <p class="problem-section__subtitle">
-          Collaboration is plagued by asynchronous processes in functional silos, scattering business domain knowledge and leading to inefficiencies, delays, and suboptimal products.
+      <div class="section-header">
+        <h2 class="section-header__title">The High Cost of Disconnected Teams</h2>
+        <p class="section-header__subtitle">
+          When product, design, and engineering work in silos, the result is a fragmented development process that costs time, money, and morale.
         </p>
       </div>
 
@@ -57,33 +57,14 @@ export default defineComponent({
 <style scoped>
 .problem-section {
   padding: var(--section-padding) 0;
-  background-color: #f8f9fa;
+  background-color: rgb(var(--v-theme-background));
+  color: rgb(var(--v-theme-on-background));
 }
 
 .problem-section__container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
-
-.problem-section__header {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 4rem;
-}
-
-.problem-section__title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.problem-section__subtitle {
-  font-size: 1.25rem;
-  color: var(--color-secondary);
-  line-height: 1.6;
 }
 
 .problem-section__grid {
@@ -93,9 +74,10 @@ export default defineComponent({
 }
 
 .problem-card {
-  background: #ffffff;
+  background-color: rgb(var(--v-theme-surface));
+  color: rgb(var(--v-theme-on-surface));
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -104,14 +86,14 @@ export default defineComponent({
 
 .problem-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .problem-card__visual {
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   position: relative;
-  background-color: #e9ecef;
+  background-color: rgba(var(--v-border-color), 0.2);
 }
 
 .problem-card__image {
@@ -146,14 +128,15 @@ export default defineComponent({
 .problem-card__title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
   margin-bottom: 1rem;
 }
 
 .problem-card__description {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
+  opacity: 0.8;
 }
 
 /* Responsive styles */
@@ -162,13 +145,7 @@ export default defineComponent({
     grid-template-columns: 1fr;
   }
 
-  .problem-section__title {
-    font-size: 2rem;
-  }
 
-  .problem-section__subtitle {
-    font-size: 1.15rem;
-  }
 
   .problem-card__title {
     font-size: 1.3rem;

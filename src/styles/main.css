@@ -80,10 +80,16 @@ img {
   vertical-align: middle;
 }
 
-/* Section base styles */
+/* Base Section Styling */
 .section {
   padding: var(--section-padding) 0;
   position: relative;
+  background-color: rgb(var(--v-theme-background));
+  color: rgb(var(--v-theme-on-background));
+}
+
+.v-theme--dark .section:nth-of-type(even) {
+  background-color: rgb(var(--v-theme-background-alt));
 }
 
 .section--light {
@@ -143,8 +149,13 @@ img {
 
 .button--primary {
   background-color: rgb(var(--v-theme-primary));
-  color: white;
-  border-color: rgb(var(--v-theme-primary));
+  color: rgb(var(--v-theme-on-primary));
+  box-shadow: var(--shadow-sm);
+}
+
+.v-theme--dark .button--primary {
+  background-color: rgb(var(--v-theme-accent));
+  color: #1a0c29; /* Dark purple for high contrast on yellow */
 }
 
 .button--primary:hover {
@@ -243,6 +254,14 @@ Component Styles (from HomeView.vue)
 }
 
 /* Footer */
+.v-theme--light .footer {
+  background-color: #f8f9fa;
+}
+
+.v-theme--dark .footer {
+  background-color: rgb(var(--v-theme-background));
+}
+
 .footer__logo-img {
   height: 36px; /* Adjust as needed */
   width: auto;

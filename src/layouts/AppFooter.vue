@@ -116,9 +116,9 @@ export default defineComponent({
 
 <style scoped>
 .footer {
-  background-color: #f8f9fa;
   padding: 4rem 0 2rem;
   margin-top: 4rem;
+  background-color: rgb(var(--v-theme-surface));
 }
 
 .footer__content {
@@ -144,7 +144,8 @@ export default defineComponent({
 }
 
 .footer__tagline {
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
+  opacity: 0.7;
   margin-bottom: 1.5rem;
 }
 
@@ -154,12 +155,13 @@ export default defineComponent({
 }
 
 .footer__social-link {
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
+  opacity: 0.7;
   transition: color 0.2s ease;
 }
 
 .footer__social-link:hover {
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
 }
 
 .footer__links {
@@ -176,7 +178,7 @@ export default defineComponent({
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
 }
 
 .footer__links-list {
@@ -188,23 +190,25 @@ export default defineComponent({
 .footer__link {
   display: block;
   padding: 0.5rem 0;
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
+  opacity: 0.7;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .footer__link:hover {
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
 }
 
 .footer__bottom {
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   padding-top: 2rem;
   text-align: center;
 }
 
 .footer__copyright {
-  color: #6c757d;
+  color: rgb(var(--v-theme-on-surface));
+  opacity: 0.5;
   font-size: 0.875rem;
   margin: 0;
 }

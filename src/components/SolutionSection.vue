@@ -10,9 +10,9 @@ export default defineComponent({
   <section class="solution-section">
     <div class="solution-section__container">
       <!-- Main Section Header -->
-      <div class="solution-section__header">
-        <h2 class="solution-section__title">Craftal: Your Single Source of Truth</h2>
-        <p class="solution-section__subtitle">
+      <div class="section-header">
+        <h2 class="section-header__title">Craftal: Your Single Source of Truth</h2>
+        <p class="section-header__subtitle">
           By creating a unified business domain model, Craftal eliminates fragmentation and ensures every team builds from the same shared understanding.
         </p>
       </div>
@@ -52,7 +52,8 @@ export default defineComponent({
 <style scoped>
 .solution-section {
   padding: var(--section-padding) 0;
-  background-color: #ffffff; /* Changed to white for contrast */
+  background-color: rgb(var(--v-theme-background));
+  color: rgb(var(--v-theme-on-background));
 }
 
 .solution-section__container {
@@ -61,25 +62,7 @@ export default defineComponent({
   padding: 0 1.5rem;
 }
 
-.solution-section__header {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 4rem;
-}
 
-.solution-section__title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.solution-section__subtitle {
-  font-size: 1.25rem;
-  color: var(--color-secondary);
-  line-height: 1.6;
-}
 
 .solution-section__grid {
   display: grid;
@@ -88,9 +71,10 @@ export default defineComponent({
 }
 
 .solution-card {
-  background: #f8f9fa; /* Light gray background for cards */
+  background-color: rgb(var(--v-theme-surface));
+  color: rgb(var(--v-theme-on-surface));
   border-radius: 12px;
-  border: 1px solid #dee2e6;
+  border: 1px solid rgba(var(--v-border-color), var(--v-border-opacity));
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -99,14 +83,14 @@ export default defineComponent({
 
 .solution-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .solution-card__visual {
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio */
   position: relative;
-  background-color: #e9ecef;
+  background-color: rgba(var(--v-border-color), 0.2);
 }
 
 .solution-card__image {
@@ -141,14 +125,15 @@ export default defineComponent({
 .solution-card__title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: rgb(var(--v-theme-primary));
   margin-bottom: 1rem;
 }
 
 .solution-card__description {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--color-secondary);
+  color: rgb(var(--v-theme-on-surface));
+  opacity: 0.8;
 }
 
 /* Responsive styles */
@@ -157,13 +142,7 @@ export default defineComponent({
     grid-template-columns: 1fr;
   }
 
-  .solution-section__title {
-    font-size: 2rem;
-  }
 
-  .solution-section__subtitle {
-    font-size: 1.15rem;
-  }
 
   .solution-card__title {
     font-size: 1.3rem;
