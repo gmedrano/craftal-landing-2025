@@ -1,6 +1,8 @@
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import { useTheme } from 'vuetify';
+import craftalLogoBlack from '@/assets/images/craftal-logo-black.svg';
+import craftalLogoLight from '@/assets/images/craftal-logo-light.svg';
 
 export default defineComponent({
   name: 'AppFooter',
@@ -8,7 +10,7 @@ export default defineComponent({
     const theme = useTheme();
 
     const logoSrc = computed(() => {
-      return theme.global.current.value.dark ? '/craftal-logo.svg' : '/craftal-logo-dark.svg';
+      return theme.global.current.value.dark ? craftalLogoLight : craftalLogoBlack;
     });
 
     const currentYear = new Date().getFullYear();
@@ -32,9 +34,9 @@ export default defineComponent({
         { title: 'Cookie Policy', to: '/cookies' },
       ],
       social: [
-        { icon: 'mdi-twitter', to: 'https://twitter.com/craftal' },
-        { icon: 'mdi-github', to: 'https://github.com/craftal' },
-        { icon: 'mdi-linkedin', to: 'https://linkedin.com/company/craftal' },
+        { icon: 'mdi-twitter', to: '#' },
+        { icon: 'mdi-github', to: '#' },
+        { icon: 'mdi-linkedin', to: '#' },
       ],
     };
 

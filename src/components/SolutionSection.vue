@@ -1,8 +1,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
+import unifiedBusinessDomain from '@/assets/images/unified-business-domain.png';
+import implementationReadyOutputs from '@/assets/images/implementation-ready-outputs.png';
 
 export default defineComponent({
   name: 'SolutionSection',
+  setup() {
+    return {
+      unifiedBusinessDomain,
+      implementationReadyOutputs,
+    };
+  },
 });
 </script>
 
@@ -22,7 +30,7 @@ export default defineComponent({
         <!-- Solution 1: Unified Domain -->
         <div class="solution-card">
           <div class="solution-card__visual">
-            <img src="/images/unified-business-domain.png" alt="Unified Business Domain Illustration" class="solution-card__image" />
+            <img :src="unifiedBusinessDomain" alt="Unified Business Domain Illustration" class="solution-card__image" />
           </div>
           <div class="solution-card__content">
             <h3 class="solution-card__title">A Unified Business Domain</h3>
@@ -35,7 +43,7 @@ export default defineComponent({
         <!-- Solution 2: Implementation-Ready Outputs -->
         <div class="solution-card">
           <div class="solution-card__visual">
-            <img src="/images/implementation-ready-outputs.png" alt="Implementation-Ready Outputs Illustration" class="solution-card__image" />
+            <img :src="implementationReadyOutputs" alt="Implementation-Ready Outputs Illustration" class="solution-card__image" />
           </div>
           <div class="solution-card__content">
             <h3 class="solution-card__title">Implementation-Ready Outputs</h3>

@@ -1,6 +1,8 @@
 <script lang="ts">
 import { defineComponent, ref, computed } from 'vue';
 import { useTheme } from 'vuetify';
+import craftalLogoDark from '@/assets/images/craftal-logo-dark.svg';
+import craftalLogoLight from '@/assets/images/craftal-logo-light.svg';
 
 export default defineComponent({
   name: 'AppHeader',
@@ -29,7 +31,7 @@ export default defineComponent({
     });
 
     const logoSrc = computed(() => {
-      return theme.global.current.value.dark ? '/craftal-logo.svg' : '/craftal-logo-dark.svg';
+      return theme.global.current.value.dark ? craftalLogoDark : craftalLogoLight;
     });
 
     return {

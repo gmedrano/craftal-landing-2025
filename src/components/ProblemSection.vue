@@ -1,11 +1,14 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
+import businessDomainFragmentation from '@/assets/images/business-domain-fragmentation.png';
+import lostInTranslation from '@/assets/images/lost-in-translation.png';
 
 export default defineComponent({
   name: 'ProblemSection',
   setup() {
     return {
-      // Component logic here
+      businessDomainFragmentation,
+      lostInTranslation,
     };
   },
 });
@@ -27,7 +30,7 @@ export default defineComponent({
         <!-- Problem 1: Fragmentation -->
         <div class="problem-card">
           <div class="problem-card__visual">
-            <img src="/images/business-domain-fragmentation.png" alt="Business Domain Fragmentation Illustration" class="problem-card__image" />
+            <img :src="businessDomainFragmentation" alt="Business Domain Fragmentation Illustration" class="problem-card__image" />
           </div>
           <div class="problem-card__content">
             <h3 class="problem-card__title">Business Domain Fragmentation</h3>
@@ -40,7 +43,7 @@ export default defineComponent({
         <!-- Problem 2: Lost in Translation -->
         <div class="problem-card">
           <div class="problem-card__visual">
-            <img src="/images/lost-in-translation.png" alt="Lost in Translation Illustration" class="problem-card__image" />
+            <img :src="lostInTranslation" alt="Lost in Translation Illustration" class="problem-card__image" />
           </div>
           <div class="problem-card__content">
             <h3 class="problem-card__title">The "Lost in Translation" Effect</h3>

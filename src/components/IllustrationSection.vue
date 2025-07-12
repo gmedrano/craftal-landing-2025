@@ -1,9 +1,10 @@
 <template>
-  <alternating-section :reversed="reversed" :type="type" :icon="icon" :placeholder-text="placeholderText">
+  <alternating-section :reversed="reversed" :type="type">
     <template #visual>
       <div class="illustration-section__visual">
         <slot name="illustration">
-          <div class="illustration-section__placeholder">
+          <img v-if="imgSrc" :src="imgSrc" :alt="altText" class="illustration-section__image" />
+          <div v-else class="illustration-section__placeholder">
             <v-icon size="x-large" class="illustration-section__icon">{{ icon }}</v-icon>
             <p>{{ placeholderText }}</p>
           </div>
@@ -55,12 +56,26 @@ export default defineComponent({
     placeholderText: {
       type: String,
       default: 'Illustration Placeholder'
+    },
+    imgSrc: {
+      type: String,
+      default: ''
+    },
+    altText: {
+      type: String,
+      default: ''
     }
   }
 });
 </script>
 
 <style scoped>
+.illustration-section__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .illustration-section__visual {
   width: 100%;
   height: 100%;

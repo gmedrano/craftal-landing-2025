@@ -1,5 +1,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
+import productScreenshot from '@/assets/images/product-screenshot.png';
+import businessDomainFragmentation from '@/assets/images/business-domain-fragmentation.png';
+import lostInTranslation from '@/assets/images/lost-in-translation.png';
+import implementationReadyOutputs from '@/assets/images/implementation-ready-outputs.png';
+import unifiedBusinessDomain from '@/assets/images/unified-business-domain.png';
 import FeatureHighlight from '@/components/FeatureHighlight.vue';
 import ProblemSection from '@/components/ProblemSection.vue';
 import SolutionSection from '@/components/SolutionSection.vue';
@@ -39,7 +44,12 @@ export default defineComponent({
     ];
 
     return {
-      features
+      features,
+      productScreenshot,
+      businessDomainFragmentation,
+      lostInTranslation,
+      implementationReadyOutputs,
+      unifiedBusinessDomain,
     };
   },
 });
@@ -65,7 +75,7 @@ export default defineComponent({
           </div>
         </div>
         <div class="hero-section__visual">
-          <img src="/images/product-screenshot.png" alt="Craftal Product Screenshot" class="hero-section__screenshot" />
+          <img :src="productScreenshot" alt="Craftal Product Screenshot" class="hero-section__screenshot" />
         </div>
       </div>
     </section>
@@ -92,6 +102,7 @@ export default defineComponent({
         title="From Complex Requirements to Clear Implementation"
         subtitle="Craftal's visual canvas makes it easy to model and understand complex business logic"
         icon="mdi-shape-outline"
+        :img-src="unifiedBusinessDomain"
         placeholder-text="Visualization of Craftal's modeling interface"
       >
         <p>Craftal transforms the way teams collaborate on product development by providing a visual, interactive canvas that bridges the gap between business requirements and technical implementation.</p>
@@ -107,7 +118,7 @@ export default defineComponent({
         type="light"
         title="The Craftal Solution"
         subtitle="One platform to rule them all. Craftal integrates with your existing tools and workflows, providing a single source of truth for your entire product lifecycle. No more context switching, no more data silos."
-        img-src="/images/product-screenshot.png"
+        :img-src="productScreenshot"
         alt-text="Craftal Platform Screenshot"
       >
         <p>Craftal fits perfectly into your existing workflow, connecting with the tools you already use every day.</p>
@@ -122,6 +133,7 @@ export default defineComponent({
         title="Seamless Integration with Your Existing Tools"
         subtitle="Connect Craftal with your favorite development and design tools"
         icon="mdi-connection"
+        :img-src="lostInTranslation"
         placeholder-text="Integration diagram with popular tools"
       >
         <p>Our AI assistant helps you build faster and with fewer errors by suggesting improvements, generating boilerplate code, and catching potential issues before they become problems.</p>
@@ -138,6 +150,7 @@ export default defineComponent({
         title="AI-Powered Development Assistant"
         subtitle="Leverage AI to accelerate your development workflow"
         icon="mdi-robot"
+        :img-src="implementationReadyOutputs"
         placeholder-text="AI assistance in action"
       >
         <p>Our AI assistant helps you build faster and with fewer errors by suggesting improvements, generating boilerplate code, and catching potential issues before they become problems.</p>
